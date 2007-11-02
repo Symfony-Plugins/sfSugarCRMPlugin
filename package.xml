@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.5.1" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
+ <name>sfSugarCRMPlugin</name>
+ <channel>pear.symfony-project.com</channel>
+ <summary>Symfony wrapper for SugarCRM</summary>
+ <description>This plugin acts as a wrapper for SugarCRM's WSDL functionality.  It enables you to add data to your SugarCRM installation(s) from within your Symfony projects quickly and efficiently, whilst respecting the concepts of blackbox programming.</description>
+ <lead>
+  <name>Nick Winfield</name>
+  <user>superhaggis</user>
+  <email>enquiries@superhaggis.com</email>
+  <active>yes</active>
+ </lead>
+ <date>2007-05-16</date>
+ <time>15:23:00</time>
+ <version>
+  <release>0.1.0</release>
+  <api>0.1.0</api>
+ </version>
+ <stability>
+  <release>beta</release>
+  <api>beta</api>
+ </stability>
+ <license uri="http://www.symfony-project.com/license">MIT license</license>
+ <notes>Uses PHP5's native SoapClient class.  Support for third-party SOAP libraries will be included in future releases.</notes>
+ <contents>
+  <dir name="/">
+   <dir name="lib">
+     <file name="sfSugarCRM.class.php" role="data" />
+     <file name="sfSugarCRMSOAPClient.class.php" role="data" />
+   </dir>
+   <file name="CHANGELOG" role="data" />
+   <file name="LICENSE" role="data" />
+   <file name="README" role="data" />
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.0.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.1</min>
+   </pearinstaller>
+   <package>
+    <name>symfony</name>
+    <channel>pear.symfony-project.com</channel>
+    <min>1.0.0</min>
+    <max>1.1.0</max>
+    <exclude>1.1.0</exclude>
+   </package>
+  </required>
+ </dependencies>
+ <phprelease />
+ <changelog />
+</package>
+

@@ -1,0 +1,77 @@
+sfSugarCRM plugin for Symfony
+=============================
+
+Overview
+--------
+
+The sfSugarCRM plugin wraps up the WSDL functionality provided by SugarCRM, simplifying the process of sending 
+requests and handling reponses.  SOAP connections are handled by the sfSugarCRMSOAPClient class, so it is 
+theoretically possible to manage multiple WSDL documents at once.
+
+The plugin allows you to interact with a SugarCRM installation, without the need for your users to work directly with 
+the software.  For example, you could create a simple HTML form that gathers basic information about a contact and 
+then pass that information cleanly into the CRM.  You would then be able to either gracefully fail if there was an 
+error, or display an appropriate "thank you" message.
+
+Requirements
+------------
+
+PHP5's native SOAP extension - SoapClient is used to communicate with the remote SugarCRM installation.  This 
+extension is enabled by default, but you may need to reconfigure your PHP build if this is not the case.  Third party 
+SOAP solutions are not catered for at this point in time, but that may change depending on user demand.
+
+A working installation of SugarCRM is also required.  This plugin was developed with version 4.5.0, but should work 
+perfectly with the latest stable build.
+
+Installation
+------------
+
+Move into your Symfony project directory and issue the following command:
+
+`symfony plugin-install http://plugins.symfony-project.com/sfSugarCRMPlugin`
+
+Alternatively, you can install the plugin via SVN.  Move into your Symfony project directory and issue the following 
+command:
+
+`svn co http://svn.symfony-project.com/plugins/sfSugarCRMPlugin/ ./plugins/sfSugarCRMPlugin`
+
+Once the plugin is installed, simply clear your cache in order to autoload the new classes:
+
+`symfony cc`
+
+Usage
+-----
+
+Inside your action, you would do the following:
+
+{{{
+$sugar = new sfSugarCRM('http://foo/crm/soap.php?wdsl');
+$sugar->setUsername('jbloggs');
+$sugar->setPassword('mypass123');
+$sugar->getUserlist();
+$response = $sugar->getResponse();
+}}}
+
+You would then deal with the SOAP response and act accordingly.
+
+Support
+-------
+
+If you have any feedback or issues with this plugin, please post a thread on the 'Plug-ins' subforum on the Symfony 
+website.  Alternatively, I can be contacted on the official Symfony IRC channel - #symfony on irc.freenode.net - my 
+nickname there, funnily enough, is 'superhaggis'. :-)
+
+Resources
+---------
+
+Web Service Description Language (WSDL) - http://www.w3.org/TR/wsdl
+Simple Object Access Protocol (SOAP) - http://www.w3.org/TR/soap/
+PHP5's SOAP implementation - http://www.php.net/soap/
+SugarCRM - http://www.sugarcrm.com/crm/download/sugar-suite.html
+sfSugarCRMPlugin WIKI - http://trac.symfony-project.com/trac/wiki/sfSugarCRMPlugin
+
+License
+-------
+
+For the full copyright and license information, please view the LICENSE file that was distributed with this source 
+code.
