@@ -25,10 +25,10 @@ perfectly with the latest stable build.
 For the time being, installation of the plugin is limited to SVN.  Move into your Symfony project directory and issue the following 
 command.
 
-For latest version:
+For latest version:[[BR]]
 `svn export http://svn.symfony-project.com/plugins/sfSugarCRMPlugin/trunk/ ./plugins/sfSugarCRMPlugin`
 
-For the latest stable (tagged) version:
+For the latest stable (tagged) version:[[BR]]
 `svn export http://svn.symfony-project.com/plugins/sfSugarCRMPlugin/tags/RELEASE_1_0_0/ ./plugins/sfSugarCRMPlugin`
 
 Once the plugin is installed, simply clear your cache in order to autoload the new classes:
@@ -59,10 +59,10 @@ nickname there, funnily enough, is 'superhaggis'. :-)
 
 == Resources ==
 
-Web Service Description Language (WSDL) - http://www.w3.org/TR/wsdl
-Simple Object Access Protocol (SOAP) - http://www.w3.org/TR/soap/
-PHP5's SOAP implementation - http://www.php.net/soap/
-SugarCRM - http://www.sugarcrm.com/crm/download/sugar-suite.html
+Web Service Description Language (WSDL) - http://www.w3.org/TR/wsdl[[BR]]
+Simple Object Access Protocol (SOAP) - http://www.w3.org/TR/soap/[[BR]]
+PHP5's SOAP implementation - http://www.php.net/soap/[[BR]]
+SugarCRM - http://www.sugarcrm.com/crm/download/sugar-suite.html[[BR]]
 sfSugarCRMPlugin WIKI - http://trac.symfony-project.com/trac/wiki/sfSugarCRMPlugin
 
 == License ==
