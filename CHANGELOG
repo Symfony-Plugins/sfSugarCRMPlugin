@@ -1,7 +1,10 @@
-Version 0.0.1
--------------
+=== TRUNK ===
 
-Initial public release.
+=== 1.0.0 STABLE ===
+
+Rolled plugin up to stable; no issues reported to date.
+
+=== 0.1.0 BETA ===
 
 Implementation of the following WSDL methods:
 

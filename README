@@ -26,18 +26,20 @@ perfectly with the latest stable build.
 Installation
 ------------
 
-Move into your Symfony project directory and issue the following command:
+For the time being, installation of the plugin is limited to SVN.  Move into your Symfony project directory and issue the following 
+command.
 
-`symfony plugin-install http://plugins.symfony-project.com/sfSugarCRMPlugin`
+For latest version:
+`svn export http://svn.symfony-project.com/plugins/sfSugarCRMPlugin/trunk/ ./plugins/sfSugarCRMPlugin`
 
-Alternatively, you can install the plugin via SVN.  Move into your Symfony project directory and issue the following 
-command:
-
-`svn co http://svn.symfony-project.com/plugins/sfSugarCRMPlugin/ ./plugins/sfSugarCRMPlugin`
+For the latest stable (tagged) version:
+`svn export http://svn.symfony-project.com/plugins/sfSugarCRMPlugin/tags/RELEASE_1_0_0/ ./plugins/sfSugarCRMPlugin`
 
 Once the plugin is installed, simply clear your cache in order to autoload the new classes:
 
 `symfony cc`
+
+You're done!
 
 Usage
 -----
