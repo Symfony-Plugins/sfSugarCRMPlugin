@@ -53,6 +53,9 @@ class sfSugarCRM
    * Default constructor.  Sets up the remote WSDL
    * document and turns off WSDL document caching.
    *
+   * Also checks to make sure that the SOAP extension
+   * has been loaded successfully.
+   *
    * Example usage:
    *
    *   $sugar = new sfSugarCRM('http://foo/crm/soap.php?wsdl');
@@ -64,10 +67,16 @@ class sfSugarCRM
    *
    * @access public
    * @param string $wsdl The absolute URI of the WSDL document.
+   * @throws sfException, if SOAP extension is not enabled.
    * @return void
    */
   public function __construct($wsdl)
   {
+    if (!in_array('soap', get_loaded_extensions()))
+    {
+      throw new sfException("PHP's native SOAP extension is not enabled; make sure PHP has been compiled correctly.");
+    }
+  
     ini_set('soap.wsdl_cache_enabled', 0);
     $this->wsdl = $wsdl;
   }
