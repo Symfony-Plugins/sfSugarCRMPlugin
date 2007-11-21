@@ -29,7 +29,7 @@ For latest version: [[BR]]
 `svn export http://svn.symfony-project.com/plugins/sfSugarCRMPlugin/trunk/ ./plugins/sfSugarCRMPlugin`
 
 For the latest stable (tagged) version: [[BR]]
-`svn export http://svn.symfony-project.com/plugins/sfSugarCRMPlugin/tags/RELEASE_1_0_0/ ./plugins/sfSugarCRMPlugin`
+`svn export http://svn.symfony-project.com/plugins/sfSugarCRMPlugin/tags/RELEASE_1_0_1/ ./plugins/sfSugarCRMPlugin`
 
 Once the plugin is installed, simply clear your cache in order to autoload the new classes:
 
