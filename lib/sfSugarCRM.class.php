@@ -20,7 +20,7 @@
 
 class sfSugarCRM
 {
-  private 
+  protected 
     /**
      * The remote WSDL document URI.
      * @access private
