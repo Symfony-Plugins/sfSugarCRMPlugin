@@ -1,5 +1,8 @@
 === TRUNK ===
 
+=== 1.0.1 STABLE ===
+
+superhaggis: Changed properties to 'protected' to enable subclassing.
 superhaggis: Added SOAP extension check.
 superhaggis: Fixed formatting in README.
 
